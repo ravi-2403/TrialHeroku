@@ -1,11 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-
+const ports = process.env.PORT || 3000;
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(3000, () => {
+app.listen(ports, () => {
   console.log("Listening to port 3000");
 });
 
